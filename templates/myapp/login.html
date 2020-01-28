@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LogIn Details</title>
+    <link href="{% static 'css/login.css' %}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+
+<div class="mainbox">
+    <div class="content">
+
+        <div class="box"><h1 class="heading">Login Details</h1>
+       <form  method="post">
+
+ <input class="box2" type="text" id="username" name="username"  placeholder= "Enter your name" required/>
+ <input class="box3" type="text" name="email"  placeholder= "Enter your email address"required/>
+ <input class="box4" type="text" name="password"  placeholder= "Enter password"/>
+
+ <p>{{error}}</p>
+<input class="box6" type="submit" value="Log In">
+
+
+
+    {% csrf_token %}
+    {{ insert_me.as_p }}
+        </form>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
